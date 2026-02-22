@@ -1,6 +1,11 @@
 Ray_Tracer_CUDA/Results/
 Ray_Tracer_CUDA/.vs/
+Ray_Tracer_CUDA/x64/
 Ray_Tracer_CUDA/Ray_Tracer_CUDA/
+Ray_Tracer_CUDA/Ray_Tracer_CUDA.vcxproj.user
+
 Ray_Tracer/Results/
 Ray_Tracer/.vs/
+Ray_Tracer/x64/
 Ray_Tracer/Ray_Tracer/
+Ray_Tracer/Ray_Tracer.vcxproj.user
