@@ -1,6 +1,7 @@
 #pragma once
 
-#include "ray.h"
+#include "ray.cuh"
+
 
 class material;
 
@@ -12,6 +13,6 @@ struct hit_record {
 };
 
 class hitable {
-public:
-	virtual bool hit(const ray& r, float tmin, float tmax, hit_record& rec) const = 0;
+	public:
+		__device__ virtual bool hit(const ray& r, float tmin, float tmax, hit_record& rec) const = 0;
 };

@@ -1,7 +1,7 @@
-#include "hitable_list.h"
+#include "hitable_list.cuh"
 
 
-bool hitable_list::hit(const ray& r, float tmin, float tmax, hit_record& rec) const {
+__device__ bool hitable_list::hit(const ray& r, float tmin, float tmax, hit_record& rec) const {
 	hit_record temp_rec;
 	bool hit_anything = false;
 	float closest = tmax;

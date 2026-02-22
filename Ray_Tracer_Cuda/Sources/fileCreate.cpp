@@ -1,6 +1,6 @@
 #include "fileCreate.h"
 
-void createPPMFile(vec3 *image, int image_width, int image_height, int samples) {
+void createPPMFile(vec3* image, int image_width, int image_height, int samples) {
 
     // Define the PPM header
     const string ppmHeader = "P3\n" + to_string(image_width) + " " + to_string(image_height) + "\n255\n";
@@ -21,7 +21,7 @@ void createPPMFile(vec3 *image, int image_width, int image_height, int samples) 
             string pixel = to_string(static_cast<int>(image[pixelIndex].r())) + " " + to_string(static_cast<int>(image[pixelIndex].g())) + " " + to_string(static_cast<int>(image[pixelIndex].b())) + " ";
             outFile << pixel + "\n";
         }
-        
+
     }
 
     // Close the file
@@ -32,7 +32,7 @@ void createPPMFile(vec3 *image, int image_width, int image_height, int samples) 
     return;
 }
 
-void createTextFile(int (*image_dim_list)[2], int num_resolutions, int *samples_list, int num_samples, double**time_list) {
+void createTextFile(int(*image_dim_list)[2], int num_resolutions, int* samples_list, int num_samples, double** time_list) {
     filesystem::path filePath = "Results/output.txt";
     ofstream file(filePath);
 
